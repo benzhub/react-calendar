@@ -1,0 +1,24 @@
+.dateButton {
+  padding: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 50px;
+  height: 36px;
+}
+
+.dateButton:hover {
+  background-color: var(--hover-color);
+}
+
+.otherMonth {
+  color: #ccc;
+}
+
+.today {
+  background-color: var(--today-color);
+}
+
+.today:hover {
+  background-color: var(--hover-color);
+}

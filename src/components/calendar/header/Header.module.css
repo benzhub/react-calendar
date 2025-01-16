@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  height: 44px;
+  margin-bottom: 16px;
+}
+
+.button {
+  width: 44px;
+  height: 44px;
+  background-color: var(--default-color);
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+}
