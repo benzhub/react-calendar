@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  height: 100dvh;
+}
+
+@media (min-width: 640px) {
+  .home {
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

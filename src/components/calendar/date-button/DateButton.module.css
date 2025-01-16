@@ -1,0 +1,15 @@
+.datebtn {
+  width: 50px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--background-color);
+}
+
+.datebtn:hover {
+  background-color: var(--hover-color);
+}
+
+.datebtn:active {
+  background-color: var(--active-color);
+}
