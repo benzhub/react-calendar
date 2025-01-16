@@ -23,7 +23,7 @@ const Selector = ({ currentDate }) => {
         return (
           <DateButton
             key={date.format("YYYY-MM-DD")}
-            date={date.format("D")}
+            dateData={date}
             isCurrentMonth={isCurrentMonth}
             isToday={isToday}
           />
@@ -34,7 +34,7 @@ const Selector = ({ currentDate }) => {
 };
 
 Selector.propTypes = {
-  currentDate: PropTypes.object.isRequired, // Moment object
+  currentDate: PropTypes.object.isRequired,
 };
 
 export default Selector;

@@ -12,7 +12,7 @@
 }
 
 .otherMonth {
-  color: #ccc;
+  color: var(--non-current-month-color);
 }
 
 .today {
@@ -21,4 +21,9 @@
 
 .today:hover {
   background-color: var(--hover-color);
+}
+
+.selected {
+  background-color: var(--selected-color);
+  color: var(--default-color);
 }

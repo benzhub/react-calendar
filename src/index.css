@@ -1,7 +1,7 @@
 :root {
   --default-color: #fff;
   --hover-color: #e6e6e6;
-  --active-color: #006edc;
+  --selected-color: #006edc;
   --today-color: #ffff76 ;
   --non-current-month-color: #757575;
 }

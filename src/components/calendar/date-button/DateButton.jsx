@@ -1,22 +1,33 @@
 import styles from "./DateButton.module.css";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import useCalendar from "../../../hooks/useCalendar";
 
-const DateButton = ({ date, isCurrentMonth, isToday=false }) => {
+const DateButton = ({ dateData, isCurrentMonth, isToday=false }) => {
+  const { startDate, endDate, handleDateSelect } = useCalendar();
+
+  const isSelected = dateData && (
+    (startDate && dateData.isSame(startDate, 'day')) ||
+    (endDate && dateData.isSame(endDate, 'day')) ||
+    (startDate && endDate && dateData.isBetween(startDate, endDate))
+  );
+
   return (
     <button
       className={classNames(styles.dateButton, {
         [styles.otherMonth]: !isCurrentMonth,
         [styles.today]: isToday,
+        [styles.selected]: isSelected,
       })}
+      onClick={() => handleDateSelect(dateData)}
     >
-      {date}日
+      {dateData.format("D")}日
     </button>
   );
 };
 
 DateButton.propTypes = {
-  date: PropTypes.string.isRequired,
+  dateData: PropTypes.object.isRequired,
   isCurrentMonth: PropTypes.bool.isRequired,
   isToday: PropTypes.bool,
 };
