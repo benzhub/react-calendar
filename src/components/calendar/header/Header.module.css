@@ -11,6 +11,7 @@
   width: 44px;
   height: 44px;
   background-color: var(--default-color);
+  color: var(--default-text-color);
   border: none;
   cursor: pointer;
 }

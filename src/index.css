@@ -4,6 +4,7 @@
   --selected-color: #006edc;
   --today-color: #ffff76 ;
   --non-current-month-color: #757575;
+  --default-text-color: #000;
 }
 
 body {
