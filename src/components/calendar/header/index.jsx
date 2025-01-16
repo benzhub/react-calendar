@@ -1,5 +1,5 @@
-import styles from "./Header.module.css"
 import PropTypes from 'prop-types'
+import styles from "./Header.module.css"
 
 const Header = ({year, month, onPrevMonth, onNextMonth}) => {
   return (
