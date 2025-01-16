@@ -3,6 +3,7 @@ import moment from "moment";
 import Header from "./header";
 import Selector from "./selector";
 import styles from "./Calendar.module.css";
+import CalendarProvider from "../../store/calendar/CalendarProvider";
 
 const Calendar = () => {
   const [date, setDate] = useState(moment());
@@ -16,15 +17,17 @@ const Calendar = () => {
   };
 
   return (
-    <div className={styles.calendar}>
-      <Header 
-        year={date.format('YYYY')}
-        month={date.format('M')}
-        onPrevMonth={handlePrevMonth}
-        onNextMonth={handleNextMonth}
-      />
-      <Selector currentDate={date} />
-    </div>
+    <CalendarProvider>
+      <div className={styles.calendar}>
+        <Header 
+          year={date.format('YYYY')}
+          month={date.format('M')}
+          onPrevMonth={handlePrevMonth}
+          onNextMonth={handleNextMonth}
+        />
+        <Selector currentDate={date} />
+      </div>
+    </CalendarProvider>
   );
 };
 
